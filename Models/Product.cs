@@ -1,4 +1,4 @@
-﻿using HPlusSport.Controllers.models;
+﻿using System.ComponentModel;
 using System.Text.Json.Serialization;
 
 namespace HPlusSport.API.Models
@@ -10,11 +10,11 @@ namespace HPlusSport.API.Models
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public decimal Price { get; set; }
-        public bool IsAvailable { get; set; }
+        public bool IsAvaliable { get; set; }
 
         public int CategoryId { get; set; }
         [JsonIgnore]
         public virtual Category Category { get; set; }
-
+        public bool IsAvailable { get; internal set; }
     }
 }
